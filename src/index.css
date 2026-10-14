@@ -1,0 +1,102 @@
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background-color: #222;
+    color: white;
+}
+
+/* Logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Search */
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search {
+    display: flex;
+    width: 40%;
+}
+
+.search input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.search button {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.top-rated-btn button {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav a {
+    width: clamp(50px, 10vw, 80px);
+    color: white;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+.cart {
+    font-weight: bold;
+}
+
+/* body component */
+.body {
+    padding: 30px;
+}
+
+.restaurant-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.restaurant-card {
+    width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    background: white;
+}
+
+.restaurant-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.restaurant-card h3 {
+    margin: 10px 0 5px;
+}
+
+.restaurant-card p {
+    margin: 5px 0;
+    color: #555;
+}
