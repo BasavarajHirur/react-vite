@@ -1,3 +1,6 @@
+import { addToCart } from "../redux/cartSlice";
+import { useDispatch } from "react-redux";
+
 const ChevronRight = () => (
     <svg
         className="h-3 w-3"
@@ -28,6 +31,11 @@ const StarIcon = () => (
 const ItemList = ({ item }) => {
 
     const { name, price, rating, ratingCount } = item;
+    const dispatch = useDispatch();
+
+    function handleAddToCart(item) {
+        dispatch(addToCart({ item }))
+    }
 
     return (
         <div className="flex items-start justify-between border-b border-gray-300 pb-5 pt-2">
@@ -57,7 +65,8 @@ const ItemList = ({ item }) => {
                 />
                 <button
                     type="button"
-                    className="absolute -bottom-1 left-1/2 w-[90px] -translate-x-1/2 rounded-lg border border-gray-300 bg-white py-1.5 text-[14px] font-bold text-green-600 shadow-md"
+                    className="absolute -bottom-1 left-1/2 w-[90px] -translate-x-1/2 rounded-lg border border-gray-300 bg-white py-1.5 text-[14px] font-bold text-green-600 shadow-md cursor-pointer"
+                    onClick={() => handleAddToCart(item)}
                 >
                     ADD
                 </button>
